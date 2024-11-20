@@ -1,0 +1,22 @@
+type Query {
+
+    products:[Product]
+    productByID(id: Int): Product
+
+}
+type Product{
+    id:Int!
+    name:String!
+    description:String
+    price:Float!
+    created:String
+    updated:String
+}
+
+type Mutation {
+
+    addProduct(name: String!, description:String,price:Float!): Product
+    updateProduct(id: Int!,name: String, description:String ,price:Float ) : Product
+    deleteProduct(id: Int!) : String
+
+}
